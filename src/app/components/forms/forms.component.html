@@ -1,0 +1,46 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <fieldset class="border border-primary p-4">
+      <div class="form-group">
+        <label for="villain" class="form-label mt-4">Name</label>
+        <input
+          type="text"
+          id="villain"
+          class="form-control"
+          aria-describedby="villain help"
+          formControlName="name"
+          placeholder="ex. Harvey Dent"
+        />
+      </div>
+      <div class="form-group">
+        <label for="alias" class="form-label mt-4">Alias</label>
+        <input
+          type="text"
+          id="alias"
+          class="form-control"
+          aria-describedby="alias help"
+          formControlName="alias"
+          placeholder="ex. Two Face"
+        />
+      </div>
+      <div class="form-group">
+        <label for="movie" class="form-label mt-4">Movie</label>
+        <input
+          type="text"
+          id="movie"
+          class="form-control"
+          aria-describedby="movie help"
+          formControlName="movie"
+          placeholder="Batman"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary mt-4"
+        [disabled]="!form.valid"
+      >
+        Submit
+      </button>
+    </fieldset>
+  </form>
+</div>

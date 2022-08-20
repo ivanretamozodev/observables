@@ -1,0 +1,24 @@
+<div class="card border-primary m-3">
+  <div class="card-header">villains list</div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Alias</th>
+          <th scope="col">Movie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let villain of villains">
+          <td>{{ villain.name }}</td>
+          <td>{{ villain.alias }}</td>
+          <td>{{ villain.movie }}</td>
+        </tr>
+        <tr *ngIf="villains.length === 0">
+          <td colspan="3" class="text-center">No Villains On List</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
